@@ -1,0 +1,38 @@
+/*
+ * Longform: Shorts removal, first line. These rules apply before the page
+ * paints, so Shorts never flash on screen. noshorts.js catches the rest
+ * (labels, unknown containers, navigation).
+ * Element names come from m.youtube.com as of November 2026.
+ */
+
+/* Bottom navigation: the Shorts tab. */
+ytm-pivot-bar-item-renderer:has(.pivot-shorts),
+
+/* Channel pages: the Shorts tab. */
+yt-tab-shape[tab-title="Shorts"],
+
+/* Shorts shelves and carousels: Home, Search, Subscriptions, channel, watch page, history. */
+ytm-reel-shelf-renderer,
+ytm-rich-section-renderer:has(ytm-reel-shelf-renderer),
+ytm-rich-section-renderer:has(ytm-shorts-lockup-view-model),
+ytm-rich-section-renderer:has(ytm-shorts-lockup-view-model-v2),
+grid-shelf-view-model:has(ytm-shorts-lockup-view-model),
+grid-shelf-view-model:has(ytm-shorts-lockup-view-model-v2),
+ytm-shelf-renderer:has(ytm-shorts-lockup-view-model),
+ytm-shorts-lockup-view-model,
+ytm-shorts-lockup-view-model-v2,
+ytm-reel-item-renderer,
+
+/* Single Shorts mixed into ordinary lists (search results, related videos, feeds). */
+ytm-video-with-context-renderer:has(a[href*="/shorts/"]),
+ytm-rich-item-renderer:has(a[href*="/shorts/"]),
+ytm-compact-video-renderer:has(a[href*="/shorts/"]),
+ytm-media-item:has(a[href*="/shorts/"]),
+ytm-media-item.big-shorts-singleton,
+yt-lockup-view-model:has(a[href*="/shorts/"]),
+ytm-notification-renderer:has(a[href*="/shorts/"]),
+
+/* Anything noshorts.js marked. */
+[data-longform-hidden] {
+  display: none !important;
+}

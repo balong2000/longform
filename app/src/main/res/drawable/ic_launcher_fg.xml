@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- A widescreen frame with a play mark over a long progress bar: long-form video. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:pathData="M38,36 H70 A7,7 0 0 1 77,43 V59 A7,7 0 0 1 70,66 H38 A7,7 0 0 1 31,59 V43 A7,7 0 0 1 38,36 Z"
+        android:strokeWidth="4"
+        android:strokeColor="#FFFFFF" />
+    <path
+        android:fillColor="#FF6B4A"
+        android:pathData="M50,44 L61,51 L50,58 Z" />
+    <path
+        android:pathData="M31,74 H77"
+        android:strokeAlpha="0.35"
+        android:strokeColor="#FFFFFF"
+        android:strokeLineCap="round"
+        android:strokeWidth="4" />
+    <path
+        android:pathData="M31,74 H62"
+        android:strokeColor="#FF6B4A"
+        android:strokeLineCap="round"
+        android:strokeWidth="4" />
+</vector>

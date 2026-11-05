@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "Longform: no Shorts",
+  "version": "1.0.0",
+  "description": "Removes every YouTube Shorts surface and opens Shorts links in the normal player.",
+  "browser_specific_settings": {
+    "gecko": { "id": "noshorts@longform.app" }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "css": ["noshorts.css"],
+      "js": ["noshorts.js"],
+      "run_at": "document_start",
+      "all_frames": false
+    }
+  ]
+}
